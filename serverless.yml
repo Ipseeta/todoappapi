@@ -13,8 +13,12 @@ functions:
       - http:
           path: /
           method: ANY
-          cors: true
+          cors: 
+            allowCredentials: true
+            origin: '*'
       - http:
           path: /{proxy+}
           method: ANY
-          cors: true
+          cors: 
+            allowCredentials: true
+            origin: '*'
