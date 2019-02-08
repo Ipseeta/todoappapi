@@ -11,14 +11,30 @@ functions:
     handler: server.run
     events:
       - http:
-          path: /
-          method: ANY
+          path: api/todos
+          method: any
           cors: 
             allowCredentials: true
             origin: '*'
+            headers: 
+              - accept
+              - Content-Type
+              - Origin
+              - User-Agent
+              - Referer
       - http:
-          path: /{proxy+}
-          method: ANY
+          path: api/todos/{id}
+          method: any
+          request:
+            parameters:
+              paths:
+                id: true
           cors: 
             allowCredentials: true
             origin: '*'
+            headers: 
+              - accept
+              - Content-Type
+              - Origin
+              - User-Agent
+              - Referer
