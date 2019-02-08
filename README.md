@@ -1,4 +1,6 @@
 This project is a demo application for using serverless framework aws-lambda. It has simple CRUD operations for a TODO app.
+
+
 Exposed endpoints are :
   ANY - https://b3tcfb1z62.execute-api.us-east-1.amazonaws.com/dev/api/todos
   ANY - https://b3tcfb1z62.execute-api.us-east-1.amazonaws.com/dev/api/todos/{id}
